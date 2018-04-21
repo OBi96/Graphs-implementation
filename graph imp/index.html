@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Graph Project</title>
+    <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/993E81BC-3FB5-9A41-AD14-5E29C5E22D25/main.js" charset="UTF-8"></script> <script src="http://d3js.org/d3.v3.min.js"></script></head>
+  
+  <body>
+	<div id="title">
+		Honours Project Graph
+	</div>
+	
+	<!-- Navigation -->
+	<div id="navi">
+	  <!-- Add edge -->
+		<div style="background-color: #999;">
+				<input id="textInsertS" type="text"  /> source           <br />
+				<input id="textInsertT" type="text"  /> target            <br />
+				<input id="butInsertLink" type="button" value="insert Edge" onclick="insertLink();" />
+		</div>
+		<!-- Add vertex -->
+		<div style="background-color: #999;">
+				<input id="butInsertVertex" type="button" value="insert Vertex" onclick="insertVertex();" />
+		</div>
+		<!-- Traverse the graph -->
+		<div style="background-color: #999;">
+				<input id="textInsertR" type="text"  /> starting vertex         
+				<br /><input id="rbBFS" type="radio" name="radioOnClick" value="bfs"/> BFS
+        <br /><input id="rbDFS" type="radio" name="radioOnClick" value="DFS" /> DFS 
+				<br /><input id="rbNone" type="radio" name="radioOnClick" value="none" checked="checked" /> none
+				<br /><input id="butInsertVertex" type="button" value="traverse" onclick="traverseGraph();" />
+		</div>
+	</div>
+  </body>
+	
+	
+	<div>
+        <svg id="svg" width="800" height="450">
+            <g transform="translate(20,20)"></g>
+        </svg>
+    </div>
+ 
+  <script src="main.js"></script>
+	<div style="background-color: #999;">
+      Instructions: <br />
+			The insert vertex button adds a new vertex to the graph (vertices can also be dragged using the mouse).<br />
+			The insert edge option lets you select a source vertex to connect to a target vertex. <br />
+			After selecting a starting vertex you can choose how you would like to traverse graph either "BFS' or "DFS".<br />
+			Selecting the "none" option when for traversing clears the paths.
+			 
+    </div>
+</html>
